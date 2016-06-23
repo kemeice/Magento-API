@@ -1,0 +1,21 @@
+Options +FollowSymLinks
+RewriteEngine On
+
+RewriteRule   ^login/?$ api_customerlogin.php [NC,L]
+RewriteRule   ^signin/?$ api_signup.php [NC,L]
+RewriteRule   ^cart/?$  cart.php [NC,L]
+RewriteRule   ^categories/?$  categories.php [NC,L]
+RewriteRule   ^products/?$  categoryproducts.php [NC,L]
+RewriteRule   ^startcheckout/?$  checkout.php [NC,L]
+RewriteRule   ^shipingmethods/?$  checkoutshiping.php [NC,L]
+RewriteRule   ^countriesdropdown/?$  countrylist.php [NC,L]
+RewriteRule   ^newaddress/?$   createaddress.php [NC,L]
+RewriteRule   ^addressbook/?$   customeralladdress.php [NC,L]
+RewriteRule   ^customerorders/?$   customerorders.php [NC,L]
+RewriteRule   ^updatecustomer/?$   customerupdate.php [NC,L]
+RewriteRule   ^dash/?$   dasboard.php [NC,L]
+ 	
+
+
+
+
