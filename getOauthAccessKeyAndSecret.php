@@ -121,7 +121,7 @@ function getOauthAccessKeyAndSecret($oauthConsumerKey,$oauthConsumerSecret,$user
 	}
 	$header .= "oauth_signature=\"".$oauthSignature.'"';
 	
-	var_dump($header);
+	//var_dump($header);
 
 	$curl = curl_init();
 
