@@ -1,7 +1,7 @@
 <?php
 
 /**
- * @author cart
+ * 
  * @copyright 2016
  */
 
