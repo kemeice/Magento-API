@@ -25,8 +25,9 @@ Mage::getSingleton('catalog/product_visibility')->addVisibleInCatalogFilterToCol
  
 foreach($productsCollection as $product){
        $img= Mage::helper('catalog/image')->init($product, 'small_image');
-    $ret[$id]['id']=$id;
     $id=$product->getId();
+	$ret[$id]['id']=$id;
+    
     $info=Mage::getModel('catalog/product')->getCollection()
         ->addAttributeToFilter('entity_id', $id)
         ->addAttributeToSelect('*')
