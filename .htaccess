@@ -14,6 +14,12 @@ RewriteRule   ^addressbook/?$   customeralladdress.php [NC,L]
 RewriteRule   ^customerorders/?$   customerorders.php [NC,L]
 RewriteRule   ^updatecustomer/?$   customerupdate.php [NC,L]
 RewriteRule   ^dash/?$   dasboard.php [NC,L]
+RewriteRule   ^regions/?$   usregionsid.php [NC,L]
+RewriteRule   ^regions/?$   usregionsid.php [NC,L]
+RewriteRule   ^confirmorder/?$   placeorder.php [NC,L]
+RewriteRule   ^productdetails/?$  productview.php [NC,L]
+RewriteRule   ^productdetails/?$  productview.php [NC,L]
+RewriteRule   ^deleteaddress/?$  deleteadress.php [NC,L]
  	
 
 
