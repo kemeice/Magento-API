@@ -20,6 +20,7 @@ RewriteRule   ^confirmorder/?$   placeorder.php [NC,L]
 RewriteRule   ^productdetails/?$  productview.php [NC,L]
 RewriteRule   ^productdetails/?$  productview.php [NC,L]
 RewriteRule   ^deleteaddress/?$  deleteadress.php [NC,L]
+RewriteRule   ^namesearch/?$  search.php [NC,L]
  	
 
 
