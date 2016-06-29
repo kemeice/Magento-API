@@ -50,7 +50,7 @@ $ret['checkout']['sid'] =$session;
             }
         }
     }
-    ///$quote->($quote->getData());
+ 
     $totals=$quote->getTotals();
    
    
@@ -60,35 +60,26 @@ $ret['checkout']['sid'] =$session;
    $ret['cart']['subtotal'] =$quote->getSubtotal();
    $ret['cart']['total'] =$quote->getGrandTotal();
    $ret['cart']['shipping'] =$quote->getShippingAddress()->getShippingAmount();;
-   //$ret['cart']['tax'] =$quote->getSubtotal();
-   //$discount=$totals['discount']->getValue();
+   
    if(isset($totals['discount']))
      $ret['cart']['discount']= round($totals['discount']->getValue()); 
  else {
      $ret['cart']['discount']='';
 }
   
- // $tax=$totals['tax']->getValue();
+ 
    if(isset($totals['tax'])){
      $ret['cart']['tax']= round($totals['tax']->getValue()); 
 } else {
       $ret['cart']['tax']= '';
 }
 
-//if(Mage::helper('checkout')->canOnepageCheckout() ){
- //$ret['cart']['Error']= 'You are not certified to purchase this product. Please take and pass your free certification';
-//}
+
 $ret=array_values($ret);       
 $result=json_encode($ret);
 echo $result;
 
 
-//$product = Mage::getModel('catalog/product')->load($productId);
-//$cart = Mage::getModel('checkout/cart');
-//$cart->init();
-//$cart->addProduct($product, array('qty' => $qty));
-//$cart->save();
-//Mage::getSingleton('checkout/session')->setCartWasUpdated(true);
 
 
 
