@@ -14,10 +14,7 @@ $product_id=$_REQUEST['id'];
 $customer=$_REQUEST['custid'];
 require_once ('config.php');
 
-//echo $product_id;
-//$product = Mage::getModel('catalog/product')->load('512');
-   
-   //Mage::register('current_customer', $customer);
+
    
    $proxy = new SoapClient(Mage::getBaseUrl().'/api/v2_soap/?wsdl'); 
 $sessionId = $proxy->login(APIUSER, APIKEY);
@@ -25,7 +22,7 @@ try{
 $result = $proxy->customerCustomerInfo($sessionId, $customer);    
 
 $groupId=$result->group_id;
-//echo $groupId;
+
 }
 
  catch (Exception $e) {
@@ -95,7 +92,8 @@ $product =Mage::getModel('catalog/product')->getCollection()
     $ret[$id]['regular_price']=number_format($product->getPrice(),2);
     $ret[$id] ['shortdescription']=strip_tags($product->getShortDescription());
     $ret[$id] ['description']=strip_tags($product->getDescription());
-    if($product->isSaleable() && $canbuy=='1'):
+    //can buy not necessary for all stores 
+	if($product->isSaleable() && $canbuy=='1'):
     $ret[$id]['avalable']='true';
     else:
     $ret[$id]['avalable']='false';
